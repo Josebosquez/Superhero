@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+    <link rel="stylesheet" href="phone.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="title">
+        My SuperHero Card Collection
+    </div>
+    <div class="mainContainer">
+        <div class="tophehe">
+
+            <div class="apiReq">
+                <fieldset>
+                    <legend id="legend">Insert Character Name</legend>
+                    <input id="inpID" type="text" placeholder="Enter Name...">
+                    <br>
+                    <br>
+                    <button type="button" id="btnInsert">Enter</button>
+                    <button type="button" id="btnClear">Clear</button>
+                </fieldset>
+                <fieldset>
+                    <legend id="legend">Search Results</legend>
+                    <div class="output"></div>
+                </fieldset>
+            </div>
+            <!-- <iframe width="950" height="534" src="https://www.youtube.com/embed/PUq-KTkyw7o" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe> -->
+
+
+            <div class="collection">
+                <div class="section">
+                    <h1>
+                        Your Collection
+                    </h1>
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cardInfo">
+            <div class="cardEdge">
+                <div id="photo"></div>
+                <div class="top">
+                    <div id="species">Race:</div>
+                    <div id="top1">
+                        <div id="nametoprow">Character:</div>
+                        <div id="durability">Health:</div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div id="combat">Combat:</div>
+                    <div id="intel">Intel:</div>
+                    <div id="power">Power:</div>
+                    <div id="speed">Speed:</div>
+                    <div id="strength">Strength:</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="backCardInfo">
+            <div class="appearance">
+                <p class='appear'>Appearance</p>
+                <div id="gender">Gender:</div>
+                <div id="height">Height:</div>
+                <div id="race">Race:</div>
+                <div id="weight">Weight:</div>
+            </div>
+
+            <div class="biography">
+                <p class='bio'>Biography</p>
+                <div id="aliases">Aliases:</div>
+                <div id="alignment">Alignment:</div>
+                <div id="publisher">Publisher:</div>
+            </div>
+            <div class="works">
+                <p class='work'>Work</p>
+                <div id="occupation">Occupation:</div>
+                <div id="base">Base:</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="secondMain.js"></script>
+
+</html>
