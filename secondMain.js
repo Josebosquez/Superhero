@@ -14,26 +14,51 @@ let row = document.querySelector(".row")
 let arr = [];
 let superheroArr = [];
 let html;
+let searchPhoto;
+let ind;
+let image = [];
 
 btnInsert.addEventListener("click", function () {
     let URL = `https://superheroapi.com/api/3935852106501451/search/${inpName.value}`
     console.log(URL)
     fetch(URL)
     .then(response => response.json())
-    .then(data => data.results.map((item) => {
-        if (item.name){
+    .then(data => data.results.map((item, i) => {
+            ind = i;
+            console.log("hello", i)
+            superheroArr.push(item)
+            console.log(item.name)
             createHTML(data)
             function createHTML() {
-                html = `<div id="box"><img id="thumbnails" onclick="clicked()"src="${item.image.url}">${item.name}</div>`
+                html = `<div id="box"><img id="thumbnails" onclick="clicked()" src="${item.image.url}">${item.name}</div>`
+                function inside (){
+                    console.log(i)
+                } inside()
                 output.innerHTML += html;
-            }
         }
     }));
+}) 
 
 
-    let searchPhoto = document.getElementById("thumbnails");
-    searchPhoto.addEventListener("click", function(){
-        createHTML(data)
-        row.innerHTML += html
-    })
+function clicked (i) {
+
+    console.log(superheroArr)
+    row.innerHTML += html
+    console.log("hello")
+    // console.log(index)
+}
+
+
+
+
+
+
+
+
+
+
+const button = document.getElementById("Arr")
+
+button.addEventListener("click", function (){
+    console.log(superheroArr)
 })
